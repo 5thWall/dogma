@@ -67,7 +67,7 @@ defmodule Dogma.Formatter.JSON do
                    |> to_string
 
     %{
-      dogma_version: Keyword.get(Dogma.Mixfile.project, :version),
+      dogma_version: Dogma.version,
       elixir_version: System.version,
       erlang_version: erl_version,
       system_architecture: architecture

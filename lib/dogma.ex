@@ -10,6 +10,13 @@ defmodule Dogma do
   alias Dogma.Rules
   alias Dogma.ScriptSources
 
+  @dogma_version Mix.Project.config[:version]
+
+  @doc """
+  Returns current Dogma version (used in formatters)
+  """
+  def version, do: @dogma_version
+
   def run({dir, formatter}) do
     dir
     |> ScriptSources.find(exclude_patterns)
