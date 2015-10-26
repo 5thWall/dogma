@@ -31,6 +31,7 @@ defmodule Dogma.RuleSet.All do
       PredicateName           => [],
       QuotesInString          => [],
       Semicolon               => [],
+      StringMatching          => [],
       TrailingBlankLines      => [],
       TrailingWhitespace      => [],
       UnlessElse              => [],

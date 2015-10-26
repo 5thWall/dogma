@@ -1,7 +1,7 @@
 # Dogma Rules
 
 These are the rules included in Dogma by default. Currently there are
-27 of them.
+28 of them.
 
 ## Contents
 
@@ -27,6 +27,7 @@ These are the rules included in Dogma by default. Currently there are
 * [PredicateName](#predicatename)
 * [QuotesInString](#quotesinstring)
 * [Semicolon](#semicolon)
+* [StringMatching](#stringmatching)
 * [TrailingBlankLines](#trailingblanklines)
 * [TrailingWhitespace](#trailingwhitespace)
 * [UnlessElse](#unlesselse)
@@ -424,6 +425,21 @@ For example, these are considered invalid:
 
 This is because Elixir does not require semicolons to terminate expressions,
 and breaking up multiple expressions on different lines improves readability.
+
+
+### StringMatching
+
+Rule that disallows string matching using binary patterns.
+
+Instead you should use string concatination.
+
+Example
+
+Invalid:
+    <<"my"::_utf8, _rest>> = "my string"
+
+Valid:
+    "my" <> _rest = "my string"
 
 
 ### TrailingBlankLines
